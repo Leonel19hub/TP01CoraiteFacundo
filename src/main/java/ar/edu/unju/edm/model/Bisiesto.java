@@ -1,0 +1,29 @@
+package ar.edu.unju.edm.model;
+
+public class Bisiesto {
+    private int anio;
+
+    public Bisiesto() {
+    }
+
+    public Bisiesto(int anio) {
+        this.anio = anio;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public boolean verificarBisiesto(int anio){
+        boolean vrfBis = false;
+        if(anio % 4 == 0 && (anio % 100 != 0 || anio % 400 == 0)){
+            vrfBis = true;
+        }
+        return vrfBis;
+    }
+    
+}
