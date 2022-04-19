@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ar.edu.unju.edm.model.Bisiesto;
 import ar.edu.unju.edm.model.EsPar;
 import ar.edu.unju.edm.model.Factorial;
+import ar.edu.unju.edm.model.MesAnual;
 
 @Controller
 public class appController {
@@ -17,6 +18,7 @@ public class appController {
         return "index";
     }
     
+    // Punto 1
     @GetMapping("/factorialNum")
     public String calcFactorial(@RequestParam(name = "num") int num, Model model){
         int resultadoS = 0;
@@ -27,6 +29,7 @@ public class appController {
         return "answer";
     }
 
+    // Punto 2
     @GetMapping("/verificarBisiesto")
     public String verfificarBisiesto(@RequestParam(name = "anio") int anio, Model model){
 
@@ -41,6 +44,7 @@ public class appController {
         return"ansBisiesto";
     }
 
+    // Punto 3
     @GetMapping("/verificarPar")
     public String esPar(@RequestParam(name = "num1") int n1, @RequestParam(name = "num2") int n2, @RequestParam(name = "num3") int n3, @RequestParam(name = "num4") int n4, @RequestParam(name = "num5") int n5, Model model){
         boolean resultado1 = false;
@@ -87,5 +91,36 @@ public class appController {
         model.addAttribute("resultado5", resultado5);
         
         return"verificarPar";
+    }
+
+    // Punto 4
+    @GetMapping("/mesDelAño")
+    public String verificarMes(@RequestParam(name = "num") int num1, Model model){
+        String resultadoS = "";
+
+        model.addAttribute("num", num1);
+
+        MesAnual esMes = new MesAnual();
+        esMes.setNumMes(num1);
+        resultadoS = esMes.esMesDelAnio(num1);
+
+        model.addAttribute("resultadoS", resultadoS);
+
+        return "mesDelAño";
+    }   
+
+    // Punto 5 -> Se utilizo la vista del punto 5, ya que es la misma pero con diferente manera de resolvre el problema
+    @GetMapping("/verificarMes")
+    public String verificarMes2(@RequestParam(name = "num")int num1, Model model){
+        String resultadoS = "";
+        model.addAttribute("num", num1);
+
+        MesAnual otherMes = new MesAnual();
+        otherMes.setNumMes(num1);
+        resultadoS = otherMes.verificarMesSwitch(num1);
+
+        model.addAttribute("resultadoS", resultadoS);
+
+        return "mesDelAño";
     }
 }
