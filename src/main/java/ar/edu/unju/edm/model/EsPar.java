@@ -26,4 +26,17 @@ public class EsPar {
         }
         return trueFalse;
     }
+
+    public String comprobraPar(int numeroPar){
+        String numeroParTrue = "";
+
+        if(numeroPar % 2 == 0){
+            numeroParTrue = "Es un numero par";
+        }
+        else{
+            numeroParTrue = "No es un numero par";
+        }
+
+        return numeroParTrue;
+    }
   }
