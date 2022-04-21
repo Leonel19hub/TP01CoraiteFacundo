@@ -9,6 +9,7 @@ import ar.edu.unju.edm.model.Bisiesto;
 import ar.edu.unju.edm.model.EsPar;
 import ar.edu.unju.edm.model.Factorial;
 import ar.edu.unju.edm.model.MesAnual;
+import ar.edu.unju.edm.model.Punto6;
 
 @Controller
 public class appController {
@@ -123,4 +124,27 @@ public class appController {
 
         return "mesDelAño";
     }
+
+    @GetMapping("/nota")
+    public String verificarNota(@RequestParam(name = "nota") int nota, Model model){
+        String resultadoS = "";
+
+        Punto6 notaVerificada = new Punto6();
+        notaVerificada.setNota(nota);
+        resultadoS = notaVerificada.verificarNota(nota);
+
+        model.addAttribute("resultadoS", resultadoS);
+        return "punto6";
+    }
+
+    @GetMapping("/punto8")
+    public String point8(Model model){
+
+        Punto6 puntoOcho = new Punto6();
+        puntoOcho.punto8();
+
+        model.addAttribute("resultadoS", puntoOcho);
+        return "punto8";
+    }
+
 }

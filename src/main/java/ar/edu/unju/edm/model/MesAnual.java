@@ -1,6 +1,6 @@
 package ar.edu.unju.edm.model;
 
-import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
+// import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
 
 public class MesAnual {
     private int numMes;
