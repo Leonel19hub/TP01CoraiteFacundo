@@ -42,24 +42,4 @@ public class Punto6 {
 
         return answer;
     }
-
-    //  EN PROSESO DE RESOLUCION!!!!!!
-    // public void punto7(){
-    //     boolean condicion = true;
-    //     for(int i=2;condicion = false;i++){
-
-    //     }
-    // }
-
-    public void punto8(){
-        // int i = 1;
-        // do{
-        //     if(i % 4 == 0){
-        //         System.out.println(i+" - ");
-        //         i++;
-
-        //     }
-        // }while(i != 100);
-        System.out.println("Comprobando punto 8");
-    }
 }

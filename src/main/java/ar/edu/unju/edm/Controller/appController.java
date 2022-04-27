@@ -172,6 +172,7 @@ public class appController {
         return "mesDelAño";
     }
 
+    // Punto 06
     @GetMapping("/nota")
     public String verificarNota(@RequestParam(name = "nota") int nota, Model model){
         String resultadoS = "";
@@ -184,14 +185,6 @@ public class appController {
         return "punto6";
     }
 
-    @GetMapping("/punto8")
-    public String point8(Model model){
-
-        Punto6 puntoOcho = new Punto6();
-        puntoOcho.punto8();
-
-        model.addAttribute("resultadoS", puntoOcho);
-        return "punto8";
-    }
+    
 
 }
