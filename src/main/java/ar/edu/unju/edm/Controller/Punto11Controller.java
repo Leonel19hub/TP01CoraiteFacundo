@@ -5,21 +5,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.unju.edm.model.Punto09;
+import ar.edu.unju.edm.model.Punto11;
 
 @Controller
-
-public class Punto09Controller {
+public class Punto11Controller {
 
     @Autowired
-    Punto09 punto09;
+    Punto11 punto11;
 
-    @GetMapping("/point09")
-    public ModelAndView getPoint8(){
-        String resultadoF = punto09.punto09ConFor();
-        ModelAndView modelView = new ModelAndView("punto09");
+    @GetMapping("/point11")
+    public ModelAndView getPoint11(){
+        String resultadoF = punto11.punto11DoWhile();
+        ModelAndView modelView = new ModelAndView("punto11");
         modelView.addObject("resultadoF", resultadoF);
         return modelView;
     }
-
+    
 }

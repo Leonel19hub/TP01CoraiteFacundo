@@ -18,7 +18,7 @@ public class Punto08Controller {
     public ModelAndView getCalculoMultiplo(@RequestParam(name = "num1") String numero){
         punto08.setNum1(Integer.valueOf(numero));
         String resultadoMultiplos = punto08.generarMultiplos();
-        ModelAndView modelView = new ModelAndView("punto8");
+        ModelAndView modelView = new ModelAndView("punto08");
         modelView.addObject("resultadoMultiplos", resultadoMultiplos);
         modelView.addObject("numero", numero);
         return modelView;
