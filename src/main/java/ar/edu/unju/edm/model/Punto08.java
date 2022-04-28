@@ -2,7 +2,6 @@ package ar.edu.unju.edm.model;
 
 import org.springframework.stereotype.Component;
 
-// Punto 08 copiado del profe
 @Component
 public class Punto08 {
     private int num1;

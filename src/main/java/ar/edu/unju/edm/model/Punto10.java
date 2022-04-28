@@ -10,7 +10,7 @@ public class Punto10 {
         int i = 320;
 
         while(i >= 160){
-            resultadoString = resultadoString + Integer.toString(i) + " _ ";
+            resultadoString = resultadoString + Integer.toString(i) + " - ";
             i = i - 20;
         }
 
