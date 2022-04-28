@@ -32,4 +32,17 @@ public class Punto08 {
         }while((resultadoInteger = num1) < 100);
         return resultadoString;
     }
+
+    public String multiplosDeNumero(){
+        String resultadoPoint8 = "";
+        int i=1;
+        do{
+            if(i % num1 == 0){
+                resultadoPoint8 = resultadoPoint8 + i + " . ";
+            }
+            i++;
+        }while(i<=100);
+
+        return resultadoPoint8;
+    }
 }

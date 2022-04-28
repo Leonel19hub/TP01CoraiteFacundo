@@ -1,26 +1,29 @@
 package ar.edu.unju.edm.model;
 
-// import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
+import org.springframework.stereotype.Component;
 
-public class MesAnual {
+@Component
+public class Punto04 {
+
     private int mes;
 
-    public MesAnual() {
+    public Punto04() {
     }
 
-    public MesAnual(int mes) {
+    public Punto04(int mes) {
         this.mes = mes;
     }
 
-    public int getmes() {
+    public int getMes() {
         return mes;
     }
 
-    public void setmes(int mes) {
+    public void setMes(int mes) {
         this.mes = mes;
     }
 
-    public String esMesDelAnio(int mes){
+    
+    public String esMesDelAnio(){
         String answer = "";
         if(mes == 1){
             // System.out.println("Mes de Enero");
@@ -87,7 +90,7 @@ public class MesAnual {
         return answer;
     }
 
-    public String verificarMesSwitch(int mes){
+    public String verificarMesSwitch(){
         String answer = "";
 
         switch(mes){
@@ -107,4 +110,5 @@ public class MesAnual {
         }
         return answer;
     }
+    
 }

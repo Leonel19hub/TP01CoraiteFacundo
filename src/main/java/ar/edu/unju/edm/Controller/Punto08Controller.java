@@ -14,10 +14,10 @@ public class Punto08Controller {
     @Autowired
     Punto08 punto08;
 
-    @GetMapping("/calculoMultiplos")
-    public ModelAndView getCalculoMultiplo(@RequestParam(name = "num1") String numero){
-        punto08.setNum1(Integer.valueOf(numero));
-        String resultadoMultiplos = punto08.generarMultiplos();
+    @GetMapping("/point08")
+    public ModelAndView getCalculoMultiplo(@RequestParam(name = "num1") int numero){
+        punto08.setNum1(numero);
+        String resultadoMultiplos = punto08.multiplosDeNumero();
         ModelAndView modelView = new ModelAndView("punto08");
         modelView.addObject("resultadoMultiplos", resultadoMultiplos);
         modelView.addObject("numero", numero);

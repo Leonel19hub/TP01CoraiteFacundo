@@ -149,7 +149,7 @@ public class appController {
         model.addAttribute("num", num1);
 
         MesAnual esMes = new MesAnual();
-        esMes.setNumMes(num1);
+        esMes.setmes(num1);
         resultadoS = esMes.esMesDelAnio(num1);
 
         model.addAttribute("resultadoS", resultadoS);
@@ -164,7 +164,7 @@ public class appController {
         model.addAttribute("num", num1);
 
         MesAnual otherMes = new MesAnual();
-        otherMes.setNumMes(num1);
+        otherMes.setmes(num1);
         resultadoS = otherMes.verificarMesSwitch(num1);
 
         model.addAttribute("resultadoS", resultadoS);
